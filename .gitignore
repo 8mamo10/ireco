@@ -37,3 +37,5 @@ lerna-debug.log*
 # nodenv
 .node-version
 
+# terraform
+terrafrom/.terraform/
