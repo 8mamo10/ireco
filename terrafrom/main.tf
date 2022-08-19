@@ -5,6 +5,9 @@ terraform {
       version = "3.5.0"
     }
   }
+  backend "gcs" {
+    prefix = "tfstate/v1"
+  }
 }
 
 provider "google" {
