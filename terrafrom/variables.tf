@@ -8,4 +8,4 @@ variable "zone" {
   default = "asia-northeast1-c"
 }
 
-
+variable "container_images" {}

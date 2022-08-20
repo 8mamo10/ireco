@@ -25,3 +25,16 @@ resource "google_artifact_registry_repository" "ireco" {
   format        = "DOCKER"
   project       = var.project
 }
+resource "google_cloud_run_service" "ireco" {
+  name     = "ireco"
+  project  = var.project
+  location = var.region
+
+  template {
+    spec {
+      containers {
+        image = var.container_images
+      }
+    }
+  }
+}
