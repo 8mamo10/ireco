@@ -38,3 +38,17 @@ resource "google_cloud_run_service" "ireco" {
     }
   }
 }
+
+resource "google_cloud_run_service" "ireco2" {
+  name     = "ireco2"
+  project  = var.project
+  location = var.region
+
+  template {
+    spec {
+      containers {
+        image = var.container_images
+      }
+    }
+  }
+}
